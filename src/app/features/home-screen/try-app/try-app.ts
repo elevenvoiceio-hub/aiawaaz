@@ -8,6 +8,7 @@ import { lucidePlay } from '@ng-icons/lucide';
 import { BrnSelectImports } from '@spartan-ng/brain/select';
 import { HlmSelectImports } from '@spartan-ng/helm/select';
 import { VOICES } from '../../../shared/constants/voices.constant';
+import { environment } from '../../../../environments/environment.development';
 
 @Component({
   selector: 'app-try-app',
@@ -25,6 +26,7 @@ import { VOICES } from '../../../shared/constants/voices.constant';
   providers: [provideIcons({ lucidePlay })],
 })
 export class TryApp {
+  domain = environment.appDomain;
   text: string = '';
 
   languages = [
@@ -43,7 +45,6 @@ export class TryApp {
 
   playAudio(audioElement: HTMLMediaElement, voice: any): void {
     audioElement.pause();
-    console.log(voice);
     audioElement.src = voice.preview_audio;
     audioElement.play();
   }

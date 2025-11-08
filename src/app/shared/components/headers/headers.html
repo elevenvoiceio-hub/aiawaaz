@@ -38,10 +38,10 @@
       <div class="flex items-center gap-2">
         <a
           class="cursor-pointer transition-colors bg-transparent text-sm hidden !px-4 py-[14px] !font-[500] !leading-none xl:block whitespace-nowrap hover:!text-[#808080]"
-          [routerLink]="['/login']"
+          [href]="domain + '/login'" target="_blank"
           ><div class="flex items-center gap-2 justify-center">Log In</div></a
         >
-        <a hlmBtn [routerLink]="['/signup']">Sign Up</a
+        <a hlmBtn [href]="domain + '/signup'" target="_blank">Sign Up</a
         ><button
           data-slot="sheet-trigger"
           class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 md:hidden"

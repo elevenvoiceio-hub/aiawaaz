@@ -3,6 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideAudioLines } from '@ng-icons/lucide';
 import { HlmButton } from '@spartan-ng/helm/button';
+import { environment } from '../../../../environments/environment.development';
 
 @Component({
   selector: 'app-headers',
@@ -12,6 +13,7 @@ import { HlmButton } from '@spartan-ng/helm/button';
   providers: [provideIcons({ lucideAudioLines })],
 })
 export class Headers {
+  domain = environment.appDomain;
   constructor(private router: Router) {}
 
   navigateToSection(sectionId: string) {
