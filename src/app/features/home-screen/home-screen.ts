@@ -13,6 +13,7 @@ import { Faqs } from './faqs/faqs';
 import { ApiStudio } from './api-studio/api-studio';
 import { Router, RouterModule } from '@angular/router';
 import { EmotionSupport } from './emotion-support/emotion-support';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-home-screen',
@@ -36,6 +37,8 @@ import { EmotionSupport } from './emotion-support/emotion-support';
   providers: [provideIcons({ lucideArrowRight })],
 })
 export class HomeScreen {
+
+  domain = environment.appDomain;
 
   constructor(private router: Router) {}
 

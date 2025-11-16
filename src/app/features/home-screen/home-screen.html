@@ -15,10 +15,10 @@
         class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
       >
         <button hlmBtn (click)="navigateToSection('demo')">Try for Free</button
-        ><button hlmBtn variant="link" routerLink="/pricing">
+        ><a hlmBtn variant="link" [href]="domain + '/pricing'" target="_blank">
           See Pricing
           <ng-icon name="lucideArrowRight" class="ml-2"></ng-icon>
-        </button>
+        </a>
       </div>
       <div class="mt-16">
         <div class="relative w-full max-w-3xl mx-auto">
