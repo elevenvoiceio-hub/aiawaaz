@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TitleStrategy, RouterStateSnapshot } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class TemplatePageTitleStrategy extends TitleStrategy {
-  appName = 'AI Awaaz';
+  appName = environment.applicationName;
   constructor(private readonly title: Title) {
     super();
   }
@@ -14,7 +15,7 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
     if (title !== undefined) {
       this.title.setTitle(`${title} | ${this.appName}`);
     } else {
-      this.title.setTitle('AI Awaaz - Best Text To Speech AI');
+      this.title.setTitle(`${this.appName} - Best Text To Speech AI`);
     }
   }
 }

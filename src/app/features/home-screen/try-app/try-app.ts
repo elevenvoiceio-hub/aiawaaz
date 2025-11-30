@@ -27,6 +27,9 @@ import { environment } from '../../../../environments/environment.development';
 })
 export class TryApp {
   domain = environment.appDomain;
+
+    appName = environment.applicationName;
+
   text: string = '';
 
   languages = [

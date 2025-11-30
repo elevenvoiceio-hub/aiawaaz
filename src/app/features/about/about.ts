@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Footer } from '../../shared/components/footer/footer';
 import { Headers } from '../../shared/components/headers/headers';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-about',
@@ -8,4 +9,6 @@ import { Headers } from '../../shared/components/headers/headers';
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
-export class About {}
+export class About {
+  appName = environment.applicationName;
+}

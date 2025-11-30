@@ -14,6 +14,8 @@ import { environment } from '../../../../environments/environment.development';
 })
 export class Headers {
   domain = environment.appDomain;
+  appName = environment.applicationName;
+
   constructor(private router: Router) {}
 
   navigateToSection(sectionId: string) {

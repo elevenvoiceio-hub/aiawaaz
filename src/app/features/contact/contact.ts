@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  FormGroup,
-  FormControl,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { HlmButton } from '@spartan-ng/helm/button';
@@ -12,13 +7,14 @@ import { HlmInput } from '@spartan-ng/helm/input';
 import { ISelectOption } from '../../core/interfaces/select.interface';
 import { HlmSelect, HlmSelectImports } from '@spartan-ng/helm/select';
 import { BrnSelectImports } from '@spartan-ng/brain/select';
-import { BrnLabel } from "@spartan-ng/brain/label";
+import { BrnLabel } from '@spartan-ng/brain/label';
 import { lucideAudioLines } from '@ng-icons/lucide';
 import { FeedbackService } from '../../core/service/feedback-serice/feedback-service';
-import { Loader } from "../../shared/components/loader/loader";
+import { Loader } from '../../shared/components/loader/loader';
+import { environment } from '../../../environments/environment';
 
 @Component({
-   selector: 'app-contact',
+  selector: 'app-contact',
   imports: [
     NgIcon,
     RouterModule,
@@ -27,13 +23,15 @@ import { Loader } from "../../shared/components/loader/loader";
     BrnSelectImports,
     HlmSelectImports,
     HlmInput,
-    Loader
-],
+    Loader,
+  ],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
-  viewProviders: [provideIcons({lucideAudioLines})],
+  viewProviders: [provideIcons({ lucideAudioLines })],
 })
 export class Contact {
+  appName = environment.applicationName;
+
   feedbackForm = new FormGroup({
     category: new FormControl('general_inquiry', Validators.required),
     priority: new FormControl('low', Validators.required),
@@ -45,7 +43,7 @@ export class Contact {
     ]),
   });
 
-  loader= false;
+  loader = false;
 
   CATEGORY_CHOICES: ISelectOption[] = [
     { value: 'billing_inquiry', label: 'Billing Inquiry' },
@@ -67,10 +65,7 @@ export class Contact {
     { value: 'closed', label: 'Closed' },
   ];
 
-  constructor(
-    private readonly feedbackService: FeedbackService,
-  ) {
-  }
+  constructor(private readonly feedbackService: FeedbackService) {}
   onSubmit = () => {
     this.loader = true;
     this.feedbackService.sendFeedback(this.feedbackForm.value).subscribe({

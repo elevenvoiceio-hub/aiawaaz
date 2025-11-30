@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../../environments/environment.development';
 
 @Component({
   selector: 'app-testimonials',
@@ -7,10 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './testimonials.css',
 })
 export class Testimonials {
+
+    appName = environment.applicationName;
+
   data = [
     {
       quote:
-        'AI Awaaz has revolutionized our workflow. The voice quality is indistinguishable from human speech.',
+        `${this.appName} has revolutionized our workflow. The voice quality is indistinguishable from human speech.`,
       author: 'Aisha Khan',
       title: 'Podcast Producer',
       avatar_src: 'https://randomuser.me/api/portraits/women/68.jpg',

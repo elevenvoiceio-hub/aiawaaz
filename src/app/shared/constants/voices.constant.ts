@@ -1,3 +1,7 @@
+import { environment } from "../../../environments/environment";
+
+const appName = environment.applicationName;
+
 export const VOICES: any = {
   'en-US': [
     {
@@ -47,30 +51,30 @@ export const VOICES: any = {
     {
       display_name: 'Hemant',
       preview_audio: 'https://vms.cdn.speechify.com/previews/cvl-hemant/hi.mp3',
-      text: 'नमस्ते मेरा नाम हेमंत है. Ai Awaaz मुझे तेजी से पढ़ने में मदत करता है.',
+      text: `नमस्ते मेरा नाम हेमंत है. ${appName} मुझे तेजी से पढ़ने में मदत करता है.`,
     },
     {
       display_name: 'Priya',
       preview_audio: 'https://vms.cdn.speechify.com/previews/cvl-priya/hi.mp3',
-      text: 'नमस्ते मेरा नाम प्रिया है. Ai Awaaz मुझे तेजी से पढ़ने में मदत करता है.',
+      text: `नमस्ते मेरा नाम प्रिया है. ${appName} मुझे तेजी से पढ़ने में मदत करता है.`,
     },
     {
       display_name: 'Kiran',
       preview_audio:
         'https://vms.cdn.speechify.com/previews/19a0916e-9604-4b0a-b595-471cdcaf4256.mp3',
-      text: 'नमस्ते मेरा नाम किरण है. Ai Awaaz मुझे तेजी से पढ़ने में मदत करता है.',
+      text: `नमस्ते मेरा नाम किरण है. ${appName} मुझे तेजी से पढ़ने में मदत करता है.`,
     },
     {
       display_name: 'Sanya',
       preview_audio:
         'https://vms.cdn.speechify.com/previews/79b5f3c8-6583-4db1-a729-6044837d36e8.mp3',
-      text: 'नमस्ते मेरा नाम सान्या है. Ai Awaaz मुझे तेजी से पढ़ने में मदत करता है.',
+      text: `नमस्ते मेरा नाम सान्या है. ${appName} मुझे तेजी से पढ़ने में मदत करता है.`,
     },
     {
       display_name: 'Riya',
       preview_audio:
         'https://vms.cdn.speechify.com/previews/54d3fa6b-d291-48a0-bf7b-dac16a5f680d.mp3',
-      text: 'नमस्ते मेरा नाम रिया है. Ai Awaaz मुझे तेजी से पढ़ने में मदत करता है.',
+      text: `नमस्ते मेरा नाम रिया है. ${appName} मुझे तेजी से पढ़ने में मदत करता है.`,
     },
   ],
   'bn-IN': [

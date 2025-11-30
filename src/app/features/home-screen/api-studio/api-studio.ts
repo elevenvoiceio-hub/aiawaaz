@@ -10,6 +10,7 @@ import {
   lucideUsers,
 } from '@ng-icons/lucide';
 import { HlmButton } from '@spartan-ng/helm/button';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-api-studio',
@@ -27,4 +28,8 @@ import { HlmButton } from '@spartan-ng/helm/button';
     }),
   ],
 })
-export class ApiStudio {}
+export class ApiStudio {
+
+    appName = environment.applicationName;
+
+}
